@@ -1,5 +1,4 @@
-window.paypal
-  .Buttons({
+paypal.Buttons({
     async createOrder() {
       try {
         const response = await fetch("/api/orders", {
@@ -84,8 +83,7 @@ window.paypal
         );
       }
     },
-  })
-  .render("#paypal-button-container");
+  }).render("#btn");
   
 // Example function to show a result to the user. Your site's UI library can be used instead.
 function resultMessage(message) {
